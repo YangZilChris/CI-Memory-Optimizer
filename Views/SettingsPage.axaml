@@ -1,0 +1,56 @@
+<ci:SettingsPageBase x:Class="CI更好的内存优化.Views.SettingsPage"
+                     xmlns="https://github.com/avaloniaui"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:ci="http://classisland.tech/schemas/xaml/core">
+  <ScrollViewer>
+    <StackPanel Margin="24" Spacing="12">
+      <TextBlock FontSize="22" FontWeight="SemiBold" Text="CI更好的内存优化" />
+      <TextBlock TextWrapping="Wrap"
+                 Text="插件仅尝试回收 ClassIsland 自身可回收的 .NET 内存，并可选修剪 ClassIsland 自身的 Windows 工作集。无法清理仍在使用的数据、强制降低 CPU 占用或保证任何内存降幅；工作集可能被系统重新调入。" />
+      <TextBlock TextWrapping="Wrap"
+                 Text="本插件部分内容由 GitHub Copilot 辅助编写，可能包含缺陷或安全漏洞；GitHub、Copilot 与 ClassIsland 官方不对本插件作背书。" />
+
+      <CheckBox x:Name="OptimizationEnabledCheckBox"
+                Click="OptimizationEnabled_OnClick"
+                Content="启用温和优化" />
+      <TextBlock TextWrapping="Wrap"
+                 Text="温和模式仅在托管堆达到阈值后，以低频、非阻塞方式请求 .NET 回收。" />
+
+      <TextBlock FontWeight="SemiBold" Text="检查间隔" />
+      <ComboBox x:Name="IntervalComboBox" SelectionChanged="IntervalComboBox_OnSelectionChanged">
+        <ComboBoxItem Content="每 1 分钟" />
+        <ComboBoxItem Content="每 5 分钟" />
+        <ComboBoxItem Content="每 15 分钟" />
+        <ComboBoxItem Content="每 30 分钟" />
+      </ComboBox>
+
+      <TextBlock FontWeight="SemiBold" Text="托管堆回收阈值" />
+      <ComboBox x:Name="ThresholdComboBox" SelectionChanged="ThresholdComboBox_OnSelectionChanged">
+        <ComboBoxItem Content="128 MiB" />
+        <ComboBoxItem Content="256 MiB" />
+        <ComboBoxItem Content="512 MiB" />
+        <ComboBoxItem Content="1024 MiB" />
+      </ComboBox>
+
+      <CheckBox x:Name="TrimWorkingSetCheckBox"
+                Click="TrimWorkingSet_OnClick"
+                Content="在 Windows 上尝试修剪 ClassIsland 工作集" />
+      <TextBlock TextWrapping="Wrap"
+                 Text="这只影响 ClassIsland 当前进程的驻留工作集，不代表释放同等数量的私有内存；其它平台不执行此操作。" />
+
+      <Separator />
+      <TextBlock FontWeight="SemiBold" Text="激进模式" />
+      <TextBlock TextWrapping="Wrap"
+                 Text="每次启动均需重新确认。开启后最多每 5 分钟检查一次；只有托管堆达到所选阈值时才执行强制、压缩式回收，但仍可能卡顿或增加 CPU 使用。也可能修剪当前工作集，内存数字可能很快回升。可能造成页面重载、崩溃或退出；非必要请勿使用。上课时建议同时开启 ClassIsland 教学安全模式，但不能保证避免故障。" />
+      <CheckBox x:Name="AggressiveModeCheckBox"
+                Click="AggressiveMode_OnClick"
+                Content="我已阅读警告，开启激进模式" />
+
+      <Separator />
+      <TextBlock x:Name="AgreementStatusText"
+                 TextWrapping="Wrap" />
+      <Button Click="AgreementsButton_OnClick" Content="查看并同意三份协议" HorizontalAlignment="Left" />
+      <TextBlock x:Name="StatusText" TextWrapping="Wrap" />
+    </StackPanel>
+  </ScrollViewer>
+</ci:SettingsPageBase>

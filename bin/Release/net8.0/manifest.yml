@@ -1,0 +1,8 @@
+id: ci.better-memory-optimizer
+name: CI更好的内存优化
+description: 以低频托管内存回收和可选工作集修剪尝试降低 ClassIsland 的内存占用；不保证固定降幅。
+entranceAssembly: "ClassIslandMemoryOptimizer.dll"
+icon: logo.png
+apiVersion: 2.0.0.0
+version: 1.0.0.2
+author: 部分内容由 GitHub Copilot 辅助编写

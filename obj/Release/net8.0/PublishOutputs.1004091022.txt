@@ -1,0 +1,10 @@
+C:\Users\Surface\.copilot\chats\2026-10-04\animated-giggle-e92fefaa\CI更好的内存优化\bin\Release\net8.0\publish\Agreements\Disclaimer.md
+C:\Users\Surface\.copilot\chats\2026-10-04\animated-giggle-e92fefaa\CI更好的内存优化\bin\Release\net8.0\publish\Agreements\PrivacyAgreement.md
+C:\Users\Surface\.copilot\chats\2026-10-04\animated-giggle-e92fefaa\CI更好的内存优化\bin\Release\net8.0\publish\Agreements\UserAgreement.md
+C:\Users\Surface\.copilot\chats\2026-10-04\animated-giggle-e92fefaa\CI更好的内存优化\bin\Release\net8.0\publish\logo.png
+C:\Users\Surface\.copilot\chats\2026-10-04\animated-giggle-e92fefaa\CI更好的内存优化\bin\Release\net8.0\publish\manifest.yml
+C:\Users\Surface\.copilot\chats\2026-10-04\animated-giggle-e92fefaa\CI更好的内存优化\bin\Release\net8.0\publish\README.md
+C:\Users\Surface\.copilot\chats\2026-10-04\animated-giggle-e92fefaa\CI更好的内存优化\bin\Release\net8.0\publish\ClassIslandMemoryOptimizer.dll
+C:\Users\Surface\.copilot\chats\2026-10-04\animated-giggle-e92fefaa\CI更好的内存优化\bin\Release\net8.0\publish\ClassIslandMemoryOptimizer.deps.json
+C:\Users\Surface\.copilot\chats\2026-10-04\animated-giggle-e92fefaa\CI更好的内存优化\bin\Release\net8.0\publish\ClassIslandMemoryOptimizer.runtimeconfig.json
+C:\Users\Surface\.copilot\chats\2026-10-04\animated-giggle-e92fefaa\CI更好的内存优化\bin\Release\net8.0\publish\ClassIslandMemoryOptimizer.pdb
